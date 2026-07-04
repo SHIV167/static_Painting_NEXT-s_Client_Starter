@@ -22,11 +22,7 @@ interface HeroSliderProps {
 }
 
 export default function HeroSlider({ slides, autoplay = true, autoplayDelay = 5000 }: HeroSliderProps) {
-  const [mounted, setMounted] = useState(false);
-
-  useEffect(() => {
-    setMounted(true);
-  }, []);
+  const [mounted] = useState(true);
 
   if (!mounted) {
     return (

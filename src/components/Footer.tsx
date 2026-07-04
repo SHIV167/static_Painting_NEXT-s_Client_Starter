@@ -13,16 +13,13 @@ export default function Footer() {
           <div>
             <div className="flex items-center gap-3 mb-6">
               <div className="relative w-10 h-10">
-                <div className="absolute inset-0 rounded-full bg-gradient-to-r from-purple-600 to-pink-600" />
-                <div className="absolute inset-1 rounded-full bg-white dark:bg-gray-900 overflow-hidden">
-                  <img
-                    src="/logo.png"
-                    alt="Heena Chowdhary Logo"
-                    width={40}
-                    height={40}
-                    className="w-full h-full object-cover rounded-full"
-                  />
-                </div>
+                <img
+                  src="/logo.png"
+                  alt="Heena Chowdhary Logo"
+                  width={40}
+                  height={40}
+                  className="w-full h-full object-cover rounded-full"
+                />
               </div>
               <span className="text-xl sm:text-2xl font-bold font-display text-gray-900">
                 Heena Chowdhary

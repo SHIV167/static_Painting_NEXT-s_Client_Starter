@@ -17,12 +17,6 @@ export default function Contact() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
 
-  // Reset form state on mount to prevent stuck "sending" state
-  useEffect(() => {
-    setIsSubmitting(false);
-    setSubmitStatus('idle');
-  }, []);
-
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
@@ -217,7 +211,7 @@ export default function Contact() {
                       </div>
                       <div>
                         <p className="font-semibold text-green-800 dark:text-green-300">Message Sent Successfully!</p>
-                        <p className="text-sm text-green-600 dark:text-green-400">We'll get back to you within 24-48 hours.</p>
+                        <p className="text-sm text-green-600 dark:text-green-400">We&apos;ll get back to you within 24-48 hours.</p>
                       </div>
                     </div>
                   </motion.div>

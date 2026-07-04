@@ -12,20 +12,19 @@ interface ThemeContextType {
 const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
 
 export function ThemeProvider({ children }: { children: React.ReactNode }) {
-  const [theme, setTheme] = useState(defaultTheme);
-
-  // Load custom theme from localStorage on mount
-  useEffect(() => {
+  const [theme, setTheme] = useState(() => {
     const savedTheme = localStorage.getItem('custom-theme');
     if (savedTheme) {
       try {
         const parsedTheme = JSON.parse(savedTheme);
-        setTheme({ ...defaultTheme, ...parsedTheme });
+        return { ...defaultTheme, ...parsedTheme };
       } catch (error) {
         console.error('Failed to parse saved theme:', error);
+        return defaultTheme;
       }
     }
-  }, []);
+    return defaultTheme;
+  });
 
   const updateTheme = (newTheme: Partial<typeof defaultTheme>) => {
     const updatedTheme = { ...theme, ...newTheme };
@@ -44,42 +43,42 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
     
     // Apply primary colors
     Object.entries(theme.primary).forEach(([key, value]) => {
-      root.style.setProperty(`--color-primary-${key}`, value);
+      root.style.setProperty(`--color-primary-${key}`, String(value));
     });
     
     // Apply secondary colors
     Object.entries(theme.secondary).forEach(([key, value]) => {
-      root.style.setProperty(`--color-secondary-${key}`, value);
+      root.style.setProperty(`--color-secondary-${key}`, String(value));
     });
     
     // Apply neutral colors
     Object.entries(theme.neutral).forEach(([key, value]) => {
-      root.style.setProperty(`--color-neutral-${key}`, value);
+      root.style.setProperty(`--color-neutral-${key}`, String(value));
     });
     
     // Apply gradients
     Object.entries(theme.gradients).forEach(([key, value]) => {
-      root.style.setProperty(`--gradient-${key}`, value);
+      root.style.setProperty(`--gradient-${key}`, String(value));
     });
     
     // Apply backgrounds
     Object.entries(theme.backgrounds).forEach(([key, value]) => {
-      root.style.setProperty(`--bg-${key}`, value);
+      root.style.setProperty(`--bg-${key}`, String(value));
     });
     
     // Apply text colors
     Object.entries(theme.text).forEach(([key, value]) => {
-      root.style.setProperty(`--text-${key}`, value);
+      root.style.setProperty(`--text-${key}`, String(value));
     });
     
     // Apply border colors
     Object.entries(theme.border).forEach(([key, value]) => {
-      root.style.setProperty(`--border-${key}`, value);
+      root.style.setProperty(`--border-${key}`, String(value));
     });
     
     // Apply shadow colors
     Object.entries(theme.shadow).forEach(([key, value]) => {
-      root.style.setProperty(`--shadow-${key}`, value);
+      root.style.setProperty(`--shadow-${key}`, String(value));
     });
   }, [theme]);
 

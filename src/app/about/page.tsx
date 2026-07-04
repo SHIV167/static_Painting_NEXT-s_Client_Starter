@@ -208,7 +208,7 @@ export default function About() {
               Artist Statement
             </h2>
             <blockquote className="text-lg md:text-2xl text-gray-200 italic leading-relaxed font-body">
-              "All that surrounds you is ART..just keep a keen eye and an open heart. Through my multidisciplinary approach, I create pieces that transform spaces and connect with viewers on a deeply personal level."
+              &ldquo;All that surrounds you is ART..just keep a keen eye and an open heart. Through my multidisciplinary approach, I create pieces that transform spaces and connect with viewers on a deeply personal level.&rdquo;
             </blockquote>
             <p className="text-white mt-6 font-semibold font-display text-base md:text-lg">
               — {artistInfo.name}
