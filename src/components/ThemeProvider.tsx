@@ -12,22 +12,22 @@ interface ThemeContextType {
 const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
 
 export function ThemeProvider({ children }: { children: React.ReactNode }) {
-  const [theme, setTheme] = useState(defaultTheme);
-
-  // Load custom theme from localStorage on mount (client-side only)
-  useEffect(() => {
-    if (typeof window !== 'undefined') {
-      const savedTheme = localStorage.getItem('custom-theme');
-      if (savedTheme) {
-        try {
-          const parsedTheme = JSON.parse(savedTheme);
-          setTheme({ ...defaultTheme, ...parsedTheme });
-        } catch (error) {
-          console.error('Failed to parse saved theme:', error);
-        }
+  const [theme, setTheme] = useState(() => {
+    if (typeof window === 'undefined') {
+      return defaultTheme;
+    }
+    const savedTheme = localStorage.getItem('custom-theme');
+    if (savedTheme) {
+      try {
+        const parsedTheme = JSON.parse(savedTheme);
+        return { ...defaultTheme, ...parsedTheme };
+      } catch (error) {
+        console.error('Failed to parse saved theme:', error);
+        return defaultTheme;
       }
     }
-  }, []);
+    return defaultTheme;
+  });
 
   const updateTheme = (newTheme: Partial<typeof defaultTheme>) => {
     const updatedTheme = { ...theme, ...newTheme };
