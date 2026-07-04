@@ -110,7 +110,7 @@ export async function sendContactFormEmail(data: {
         <p><strong>Message:</strong></p>
         <p style="white-space: pre-wrap;">${data.message}</p>
       </div>
-      <p style="color: #6b7280; font-size: 12px;">This email was sent from the Art Gallery contact form.</p>
+      <p style="color: #6b7280; font-size: 12px;">This email was sent from the Heena Chowdhary contact form.</p>
     </div>
   `;
 
@@ -124,19 +124,19 @@ export async function sendContactFormEmail(data: {
 export async function sendNewsletterConfirmation(email: string) {
   const html = `
     <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px;">
-      <h2 style="color: #7c3aed;">Welcome to Art Gallery Newsletter</h2>
+      <h2 style="color: #7c3aed;">Welcome to Heena Chowdhary Newsletter</h2>
       <p>Thank you for subscribing to our newsletter!</p>
       <p>You'll receive updates about new exhibitions, artists, and events.</p>
       <div style="margin: 30px 0;">
         <a href="${process.env.NEXT_PUBLIC_SITE_URL}" style="background: linear-gradient(to right, #7c3aed, #ec4899); color: white; padding: 12px 24px; text-decoration: none; border-radius: 8px; display: inline-block;">Visit Gallery</a>
       </div>
-      <p style="color: #6b7280; font-size: 12px;">© ${new Date().getFullYear()} Art Gallery. All rights reserved.</p>
+      <p style="color: #6b7280; font-size: 12px;">© ${new Date().getFullYear()} Heena Chowdhary. All rights reserved.</p>
     </div>
   `;
 
   return sendEmail({
     to: email,
-    subject: 'Welcome to Art Gallery Newsletter',
+    subject: 'Welcome to Heena Chowdhary Newsletter',
     html,
   });
 }

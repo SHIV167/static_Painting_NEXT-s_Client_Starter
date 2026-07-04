@@ -6,25 +6,36 @@ import { artistInfo } from '@/lib/data';
 import { FiAward, FiBook, FiHeart } from 'react-icons/fi';
 
 export default function About() {
+  const heroBanner = 'https://instagram.fdel1-8.fna.fbcdn.net/v/t51.82787-15/673122680_17962021311073055_1029815282776648670_n.jpg?stp=dst-jpg_e35_p1080x1080_tt6&_nc_cat=100&_nc_map=urlgen_bucketless&ig_cache_key=Mzg4MjA5ODU5ODc4MzAzNzg3OQ%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0ueHBpZHMuMTQ0MC5zZHIucmVndWxhcl9waG90by5DMyJ9&_nc_ohc=V5IRkV0z_zMQ7kNvwEjR7Sv&_nc_oc=Adqdp5-6dSxGFDG9ZvU0ejj7kSGS4DUtQUMFaA0M0zZCSz_Qg2LLsLE6so35C6KX1P0aOJuPZ-T5ttxstMhv3P19&_nc_ad=z-m&_nc_cid=1174&_nc_zt=23&_nc_ht=instagram.fdel1-8.fna&_nc_gid=HvZqabhXxyReYwRW9fd9Kw&_nc_ss=7a22e&oh=00_AQCwdrVNzkfhSG-0gVfAdbMfJKe20W148EIA3HJgqgeG0A&oe=6A4F1A81';
+
   return (
     <div className="min-h-screen bg-gray-50 dark:bg-gray-900">
-      {/* Hero Section */}
-      <section className="relative h-96 flex items-center justify-center overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-purple-900 via-pink-800 to-orange-700 opacity-90" />
-        <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?w=1920&q=80')] bg-cover bg-center opacity-30" />
+      {/* Hero Section with Banner */}
+      <section className="relative w-full h-96 md:h-[500px]">
+        <Image
+          src={heroBanner}
+          alt="Heena Chowdhary Art"
+          fill
+          sizes="100vw"
+          priority
+          className="object-cover"
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
         
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="relative z-10 text-center px-4"
+          className="relative z-10 text-center px-4 flex items-center justify-center h-full"
         >
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold font-heading text-white mb-4">
-            About the Artist
-          </h1>
-          <p className="text-base md:text-lg lg:text-xl text-gray-200 font-body">
-            Discover the story behind the art
-          </p>
+          <div>
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold font-heading text-white mb-4">
+              About the Artist
+            </h1>
+            <p className="text-base md:text-lg lg:text-xl text-gray-200 font-body">
+              Discover the story behind the art
+            </p>
+          </div>
         </motion.div>
       </section>
 
@@ -197,7 +208,7 @@ export default function About() {
               Artist Statement
             </h2>
             <blockquote className="text-lg md:text-2xl text-gray-200 italic leading-relaxed font-body">
-              "Art is not just what you see, but what you make others see. My work aims to bridge the gap between traditional Indian aesthetics and contemporary artistic expression, creating pieces that resonate with viewers on a deeply personal level."
+              "All that surrounds you is ART..just keep a keen eye and an open heart. Through my multidisciplinary approach, I create pieces that transform spaces and connect with viewers on a deeply personal level."
             </blockquote>
             <p className="text-white mt-6 font-semibold font-display text-base md:text-lg">
               — {artistInfo.name}

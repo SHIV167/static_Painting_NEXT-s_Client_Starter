@@ -1,6 +1,6 @@
 'use client';
 
-import { FiInstagram, FiTwitter, FiMail, FiMapPin, FiFacebook, FiLinkedin, FiYoutube, FiGithub } from 'react-icons/fi';
+import { FiInstagram, FiTwitter, FiMail, FiMapPin, FiFacebook, FiLinkedin, FiYoutube } from 'react-icons/fi';
 import Link from 'next/link';
 import { theme } from '@/lib/theme';
 
@@ -12,14 +12,20 @@ export default function Footer() {
           {/* Brand Section */}
           <div>
             <div className="flex items-center gap-3 mb-6">
-              <img
-                src="/logo.png"
-                alt="Art Gallery Logo"
-                width={40}
-                height={40}
-              />
+              <div className="relative w-10 h-10">
+                <div className="absolute inset-0 rounded-full bg-gradient-to-r from-purple-600 to-pink-600 animate-spin" style={{ animationDuration: '3s' }} />
+                <div className="absolute inset-1 rounded-full bg-white dark:bg-gray-900 overflow-hidden">
+                  <img
+                    src="/logo.png"
+                    alt="Heena Chowdhary Logo"
+                    width={40}
+                    height={40}
+                    className="w-full h-full object-cover rounded-full"
+                  />
+                </div>
+              </div>
               <span className="text-xl sm:text-2xl font-bold font-display text-gray-900">
-                Art Gallery
+                Heena Chowdhary
               </span>
             </div>
             <p className="mb-6 leading-relaxed text-gray-600">
@@ -45,7 +51,6 @@ export default function Footer() {
                     href={link.href}
                     className="flex items-center gap-2 group transition-colors text-gray-600 hover:text-gray-900"
                   >
-                    <span className="w-1.5 h-1.5 rounded-full transition-opacity opacity-0 group-hover:opacity-100 bg-gray-900" />
                     {link.name}
                   </Link>
                 </li>
@@ -93,7 +98,6 @@ export default function Footer() {
               { icon: FiTwitter, name: 'Twitter', href: '#' },
               { icon: FiLinkedin, name: 'LinkedIn', href: '#' },
               { icon: FiYoutube, name: 'YouTube', href: '#' },
-              { icon: FiGithub, name: 'GitHub', href: '#' },
             ].map((social) => {
               const Icon = social.icon;
               return (
@@ -113,7 +117,7 @@ export default function Footer() {
         {/* Bottom Bar */}
         <div className="border-t border-gray-200 mt-12 pt-8 text-center">
           <p className="text-sm text-gray-600">
-            &copy; {new Date().getFullYear()} Art Gallery. All rights reserved.
+            &copy; {new Date().getFullYear()} Heena Chowdhary. All rights reserved.
           </p>
         </div>
       </div>

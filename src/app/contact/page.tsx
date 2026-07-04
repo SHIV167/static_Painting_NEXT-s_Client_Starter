@@ -4,8 +4,10 @@ import { motion } from 'framer-motion';
 import { useState, useEffect } from 'react';
 import { FiMail, FiMapPin, FiPhone, FiSend } from 'react-icons/fi';
 import toast, { Toaster } from 'react-hot-toast';
+import Image from 'next/image';
 
 export default function Contact() {
+  const heroBanner = 'https://instagram.fdel1-8.fna.fbcdn.net/v/t51.82787-15/673122680_17962021311073055_1029815282776648670_n.jpg?stp=dst-jpg_e35_p1080x1080_tt6&_nc_cat=100&_nc_map=urlgen_bucketless&ig_cache_key=Mzg4MjA5ODU5ODc4MzAzNzg3OQ%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0ueHBpZHMuMTQ0MC5zZHIucmVndWxhcl9waG90by5DMyJ9&_nc_ohc=V5IRkV0z_zMQ7kNvwEjR7Sv&_nc_oc=Adqdp5-6dSxGFDG9ZvU0ejj7kSGS4DUtQUMFaA0M0zZCSz_Qg2LLsLE6so35C6KX1P0aOJuPZ-T5ttxstMhv3P19&_nc_ad=z-m&_nc_cid=1174&_nc_zt=23&_nc_ht=instagram.fdel1-8.fna&_nc_gid=HvZqabhXxyReYwRW9fd9Kw&_nc_ss=7a22e&oh=00_AQCwdrVNzkfhSG-0gVfAdbMfJKe20W148EIA3HJgqgeG0A&oe=6A4F1A81';
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -74,23 +76,32 @@ export default function Contact() {
   return (
     <div className="min-h-screen bg-gray-50 dark:bg-gray-900">
       <Toaster />
-      {/* Hero Section */}
-      <section className="relative h-96 flex items-center justify-center overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-purple-900 via-pink-800 to-orange-700 opacity-90" />
-        <div className="absolute inset-0 bg-[url('https://res.cloudinary.com/dj15ypnx8/image/upload/v1782740773/art-gallery/photo-1579783902614-a3fb3927b6a5.jpg')] bg-cover bg-center opacity-30" />
+      {/* Hero Section with Banner */}
+      <section className="relative w-full h-96 md:h-[500px]">
+        <Image
+          src={heroBanner}
+          alt="Heena Chowdhary Art"
+          fill
+          sizes="100vw"
+          priority
+          className="object-cover"
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
         
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="relative z-10 text-center px-4"
+          className="relative z-10 text-center px-4 flex items-center justify-center h-full"
         >
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold font-heading text-white mb-4">
-            Contact Us
-          </h1>
-          <p className="text-base md:text-lg lg:text-xl text-gray-200 font-body">
-            Get in touch with us for inquiries, commissions, or collaborations
-          </p>
+          <div>
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold font-heading text-white mb-4">
+              Contact Us
+            </h1>
+            <p className="text-base md:text-lg lg:text-xl text-gray-200 font-body">
+              Get in touch with us for inquiries, commissions, or collaborations
+            </p>
+          </div>
         </motion.div>
       </section>
 

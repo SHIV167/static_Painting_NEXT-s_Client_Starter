@@ -1,6 +1,6 @@
-# Painting Gallery - Next.js Application
+# Heena Chowdhary - Art Portfolio
 
-A modern, responsive art gallery website built with Next.js 16.2.9, featuring a beautiful UI with smooth animations, image gallery, contact form with email integration, and image upload capabilities.
+A modern, responsive art portfolio website for Heena Chowdhary, a multidisciplinary artist based in Delhi. Built with Next.js 16.2.9, featuring a beautiful UI with smooth animations, image gallery, contact form with email integration, and image upload capabilities.
 
 ![Next.js](https://img.shields.io/badge/Next.js-16.2.9-black)
 ![TypeScript](https://img.shields.io/badge/TypeScript-5.x-blue)

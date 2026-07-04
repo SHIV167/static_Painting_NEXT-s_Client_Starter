@@ -32,8 +32,8 @@ const spaceGrotesk = Space_Grotesk({
 });
 
 export const metadata: Metadata = {
-  title: "Art Gallery - Contemporary Indian Art",
-  description: "Showcasing contemporary paintings and artwork from India's finest artists",
+  title: "Heena Chowdhary - Multidisciplinary Artist | Shades n Strokes",
+  description: "Multidisciplinary artist based in Delhi. All that surrounds you is ART..just keep a keen eye and an open heart. Contact for customised art.",
   icons: {
     icon: "/logo.png",
     apple: "/logo.png",
