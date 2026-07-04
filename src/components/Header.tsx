@@ -42,16 +42,13 @@ export default function Header() {
             <Link href="/" className="flex items-center gap-3 group">
               <div className="relative">
                 <div className="relative w-12 h-12">
-                  <div className="absolute inset-0 rounded-full bg-gradient-to-r from-purple-600 to-pink-600 animate-spin" style={{ animationDuration: '3s' }} />
-                  <div className="absolute inset-1 rounded-full bg-white dark:bg-black overflow-hidden">
-                    <img
-                      src="/logo.png"
-                      alt="Heena Chowdhary Logo"
-                      width={48}
-                      height={48}
-                      className={`w-full h-full object-cover rounded-full transition-transform group-hover:scale-110 ${pathname === '/' ? 'scale-110' : ''}`}
-                    />
-                  </div>
+                  <img
+                    src="/logo.png"
+                    alt="Heena Chowdhary Logo"
+                    width={48}
+                    height={48}
+                    className={`w-full h-full object-cover rounded-full transition-transform group-hover:scale-110 ${pathname === '/' ? 'scale-110' : ''}`}
+                  />
                 </div>
               </div>
               <span 
@@ -139,16 +136,13 @@ export default function Header() {
                 <div className="flex items-center justify-between mb-8">
                   <Link href="/" className="flex items-center gap-3" onClick={() => setIsMenuOpen(false)}>
                     <div className="relative w-10 h-10">
-                      <div className="absolute inset-0 rounded-full bg-gradient-to-r from-purple-600 to-pink-600 animate-spin" style={{ animationDuration: '3s' }} />
-                      <div className="absolute inset-1 rounded-full bg-white dark:bg-black overflow-hidden">
-                        <img
-                          src="/logo.png"
-                          alt="Heena Chowdhary Logo"
-                          width={40}
-                          height={40}
-                          className={`w-full h-full object-cover rounded-full transition-transform ${pathname === '/' ? 'scale-110' : ''}`}
-                        />
-                      </div>
+                      <img
+                        src="/logo.png"
+                        alt="Heena Chowdhary Logo"
+                        width={40}
+                        height={40}
+                        className={`w-full h-full object-cover rounded-full transition-transform ${pathname === '/' ? 'scale-110' : ''}`}
+                      />
                     </div>
                     <span 
                       className={`text-xl font-bold font-display bg-clip-text text-transparent ${pathname === '/' ? 'opacity-100' : 'opacity-90'}`}
