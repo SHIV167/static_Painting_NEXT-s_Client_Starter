@@ -77,17 +77,17 @@ export default function VideoCardSlider({ videos, heading, subheading }: VideoCa
       )}
 
       {/* Navigation Buttons - Positioned at corners */}
-      <div className="relative">
+      <div className="relative px-12 md:px-0">
         <button
           onClick={() => scroll('left')}
-          className="absolute left-0 top-1/2 -translate-y-1/2 z-10 w-12 h-12 rounded-full bg-white dark:bg-gray-800 shadow-lg flex items-center justify-center hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors border border-gray-200 dark:border-gray-700"
+          className="absolute left-0 top-1/2 -translate-y-1/2 z-10 w-12 h-12 rounded-full bg-white dark:bg-gray-800 shadow-lg flex items-center justify-center hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors border border-gray-200 dark:border-gray-700 hidden md:flex"
         >
           <FiChevronLeft className="text-gray-900 dark:text-white text-xl" />
         </button>
 
         <div
           ref={containerRef}
-          className="flex gap-4 overflow-x-auto snap-x snap-mandatory pb-4 scrollbar-hide px-16"
+          className="flex gap-4 overflow-x-auto snap-x snap-mandatory pb-4 scrollbar-hide"
         >
           {videos.map((video, index) => (
             <motion.div
@@ -96,7 +96,7 @@ export default function VideoCardSlider({ videos, heading, subheading }: VideoCa
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.1, duration: 0.5 }}
-              className="flex-shrink-0 w-72 md:w-80 snap-start mx-auto"
+              className="flex-shrink-0 w-full md:w-80 snap-start px-2 md:px-0"
             >
               <div
                 className="relative rounded-2xl overflow-hidden shadow-2xl bg-gray-900 cursor-pointer group"
@@ -192,7 +192,7 @@ export default function VideoCardSlider({ videos, heading, subheading }: VideoCa
 
         <button
           onClick={() => scroll('right')}
-          className="absolute right-0 top-1/2 -translate-y-1/2 z-10 w-12 h-12 rounded-full bg-white dark:bg-gray-800 shadow-lg flex items-center justify-center hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors border border-gray-200 dark:border-gray-700"
+          className="absolute right-0 top-1/2 -translate-y-1/2 z-10 w-12 h-12 rounded-full bg-white dark:bg-gray-800 shadow-lg flex items-center justify-center hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors border border-gray-200 dark:border-gray-700 hidden md:flex"
         >
           <FiChevronRight className="text-gray-900 dark:text-white text-xl" />
         </button>
