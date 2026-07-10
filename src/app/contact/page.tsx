@@ -100,9 +100,13 @@ export default function Contact() {
       </section>
 
       {/* Contact Content */}
-      <section className="py-20 px-4">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+      <section className="py-24 px-4 bg-gray-50 dark:bg-gray-900 relative overflow-hidden">
+        {/* Background Decorative Elements */}
+        <div className="absolute top-0 right-0 w-96 h-96 bg-purple-500/5 rounded-full blur-3xl" />
+        <div className="absolute bottom-0 left-0 w-96 h-96 bg-pink-500/5 rounded-full blur-3xl" />
+        
+        <div className="max-w-7xl mx-auto relative z-10">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
             {/* Contact Form */}
             <motion.div
               initial={{ opacity: 0, x: -30 }}
@@ -110,79 +114,122 @@ export default function Contact() {
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
             >
-              <h2 className="text-2xl md:text-3xl font-bold font-heading text-gray-900 dark:text-white mb-6">
+              <motion.h2 
+                className="text-4xl md:text-5xl font-bold font-heading text-gray-900 dark:text-white mb-8"
+                style={{
+                  background: 'linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%)',
+                  WebkitBackgroundClip: 'text',
+                  WebkitTextFillColor: 'transparent',
+                  backgroundClip: 'text'
+                }}
+              >
                 Send us a Message
-              </h2>
+              </motion.h2>
+              
+              <motion.p 
+                className="text-lg text-gray-600 dark:text-gray-400 mb-8"
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                transition={{ delay: 0.2 }}
+              >
+                We'd love to hear from you. Fill out the form below and we'll get back to you within 24-48 hours.
+              </motion.p>
               
               <form onSubmit={handleSubmit} className="space-y-6">
-                <div>
+                <motion.div
+                  initial={{ opacity: 0, y: 10 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: 0.3 }}
+                >
                   <label htmlFor="name" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
                     Name
                   </label>
-                  <input
+                  <motion.input
+                    whileFocus={{ scale: 1.02 }}
                     type="text"
                     id="name"
                     name="name"
                     value={formData.name}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:ring-2 focus:ring-purple-500 focus:border-transparent outline-none transition-all"
+                    className="w-full px-5 py-4 rounded-2xl border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:ring-2 focus:ring-purple-500 focus:border-transparent outline-none transition-all shadow-sm"
                     placeholder="Your name"
                   />
-                </div>
+                </motion.div>
 
-                <div>
+                <motion.div
+                  initial={{ opacity: 0, y: 10 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: 0.4 }}
+                >
                   <label htmlFor="email" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
                     Email
                   </label>
-                  <input
+                  <motion.input
+                    whileFocus={{ scale: 1.02 }}
                     type="email"
                     id="email"
                     name="email"
                     value={formData.email}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:ring-2 focus:ring-purple-500 focus:border-transparent outline-none transition-all"
+                    className="w-full px-5 py-4 rounded-2xl border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:ring-2 focus:ring-purple-500 focus:border-transparent outline-none transition-all shadow-sm"
                     placeholder="your@email.com"
                   />
-                </div>
+                </motion.div>
 
-                <div>
+                <motion.div
+                  initial={{ opacity: 0, y: 10 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: 0.5 }}
+                >
                   <label htmlFor="subject" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
                     Subject
                   </label>
-                  <input
+                  <motion.input
+                    whileFocus={{ scale: 1.02 }}
                     type="text"
                     id="subject"
                     name="subject"
                     value={formData.subject}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:ring-2 focus:ring-purple-500 focus:border-transparent outline-none transition-all"
+                    className="w-full px-5 py-4 rounded-2xl border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:ring-2 focus:ring-purple-500 focus:border-transparent outline-none transition-all shadow-sm"
                     placeholder="How can we help?"
                   />
-                </div>
+                </motion.div>
 
-                <div>
+                <motion.div
+                  initial={{ opacity: 0, y: 10 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: 0.6 }}
+                >
                   <label htmlFor="message" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
                     Message
                   </label>
-                  <textarea
+                  <motion.textarea
+                    whileFocus={{ scale: 1.02 }}
                     id="message"
                     name="message"
                     value={formData.message}
                     onChange={handleChange}
                     required
                     rows={6}
-                    className="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:ring-2 focus:ring-purple-500 focus:border-transparent outline-none transition-all resize-none"
+                    className="w-full px-5 py-4 rounded-2xl border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:ring-2 focus:ring-purple-500 focus:border-transparent outline-none transition-all resize-none shadow-sm"
                     placeholder="Tell us more about your inquiry..."
                   />
-                </div>
+                </motion.div>
 
-                <button
+                <motion.button
+                  whileHover={{ scale: 1.02 }}
+                  whileTap={{ scale: 0.98 }}
                   type="submit"
                   disabled={isSubmitting}
-                  className="w-full px-8 py-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-lg font-semibold hover:from-purple-700 hover:to-pink-700 transition-all flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed"
+                  className="w-full px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-2xl font-semibold hover:from-purple-700 hover:to-pink-700 transition-all flex items-center justify-center gap-3 disabled:opacity-50 disabled:cursor-not-allowed shadow-xl hover:shadow-2xl"
                 >
                   {isSubmitting ? (
                     <>
@@ -195,23 +242,26 @@ export default function Contact() {
                       Send Message
                     </>
                   )}
-                </button>
+                </motion.button>
 
                 {submitStatus === 'success' && (
                   <motion.div
                     initial={{ opacity: 0, y: -10 }}
                     animate={{ opacity: 1, y: 0 }}
-                    className="p-4 bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 rounded-lg"
+                    className="p-5 bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 rounded-2xl"
                   >
                     <div className="flex items-center gap-3">
-                      <div className="w-8 h-8 bg-green-100 dark:bg-green-800 rounded-full flex items-center justify-center">
-                        <svg className="w-5 h-5 text-green-600 dark:text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <motion.div
+                        whileHover={{ scale: 1.1, rotate: 10 }}
+                        className="w-10 h-10 bg-green-100 dark:bg-green-800 rounded-full flex items-center justify-center"
+                      >
+                        <svg className="w-6 h-6 text-green-600 dark:text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                         </svg>
-                      </div>
+                      </motion.div>
                       <div>
                         <p className="font-semibold text-green-800 dark:text-green-300">Message Sent Successfully!</p>
-                        <p className="text-sm text-green-600 dark:text-green-400">We&apos;ll get back to you within 24-48 hours.</p>
+                        <p className="text-sm text-green-600 dark:text-green-400">We'll get back to you within 24-48 hours.</p>
                       </div>
                     </div>
                   </motion.div>
@@ -221,14 +271,17 @@ export default function Contact() {
                   <motion.div
                     initial={{ opacity: 0, y: -10 }}
                     animate={{ opacity: 1, y: 0 }}
-                    className="p-4 bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 rounded-lg"
+                    className="p-5 bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 rounded-2xl"
                   >
                     <div className="flex items-center gap-3">
-                      <div className="w-8 h-8 bg-red-100 dark:bg-red-800 rounded-full flex items-center justify-center">
-                        <svg className="w-5 h-5 text-red-600 dark:text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <motion.div
+                        whileHover={{ scale: 1.1, rotate: -10 }}
+                        className="w-10 h-10 bg-red-100 dark:bg-red-800 rounded-full flex items-center justify-center"
+                      >
+                        <svg className="w-6 h-6 text-red-600 dark:text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
                         </svg>
-                      </div>
+                      </motion.div>
                       <div>
                         <p className="font-semibold text-red-800 dark:text-red-300">Failed to Send Message</p>
                         <p className="text-sm text-red-600 dark:text-red-400">Please try again or contact us directly via email.</p>
@@ -245,30 +298,48 @@ export default function Contact() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
-              className="space-y-8"
+              className="space-y-10"
             >
-              <div>
-                <h2 className="text-2xl md:text-3xl font-bold font-heading text-gray-900 dark:text-white mb-6">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.2 }}
+              >
+                <motion.h2 
+                  className="text-4xl md:text-5xl font-bold font-heading text-gray-900 dark:text-white mb-6"
+                  style={{
+                    background: 'linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%)',
+                    WebkitBackgroundClip: 'text',
+                    WebkitTextFillColor: 'transparent',
+                    backgroundClip: 'text'
+                  }}
+                >
                   Contact Information
-                </h2>
-                <p className="text-base md:text-lg text-gray-600 dark:text-gray-400 mb-8 font-body">
+                </motion.h2>
+                <p className="text-lg text-gray-600 dark:text-gray-400 mb-8 font-body">
                   Feel free to reach out to us through any of the following channels. We typically respond within 24-48 hours.
                 </p>
-              </div>
+              </motion.div>
 
-              <div className="space-y-6">
+              <div className="space-y-8">
                 <motion.div
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
-                  transition={{ delay: 0.1, duration: 0.6 }}
-                  className="flex items-start gap-4"
+                  transition={{ delay: 0.3, duration: 0.6 }}
+                  whileHover={{ x: 10 }}
+                  className="flex items-start gap-5 bg-white dark:bg-gray-800 p-6 rounded-2xl shadow-lg"
                 >
-                  <div className="w-12 h-12 bg-purple-100 dark:bg-purple-900 rounded-lg flex items-center justify-center flex-shrink-0">
-                    <FiMail className="text-purple-600 dark:text-purple-400 text-xl" />
-                  </div>
+                  <motion.div
+                    whileHover={{ rotate: 360, scale: 1.1 }}
+                    transition={{ duration: 0.6 }}
+                    className="w-14 h-14 bg-gradient-to-br from-purple-100 to-pink-100 dark:from-purple-900/30 dark:to-pink-900/30 rounded-2xl flex items-center justify-center flex-shrink-0"
+                  >
+                    <FiMail className="text-purple-600 dark:text-purple-400 text-2xl" />
+                  </motion.div>
                   <div>
-                    <h3 className="font-semibold font-display text-gray-900 dark:text-white mb-1">Email</h3>
+                    <h3 className="font-semibold font-display text-gray-900 dark:text-white mb-2 text-lg">Email</h3>
                     <p className="text-gray-600 dark:text-gray-400 font-body">info@artgallery.com</p>
                     <p className="text-gray-600 dark:text-gray-400 font-body">commissions@artgallery.com</p>
                   </div>
@@ -278,14 +349,19 @@ export default function Contact() {
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
-                  transition={{ delay: 0.2, duration: 0.6 }}
-                  className="flex items-start gap-4"
+                  transition={{ delay: 0.4, duration: 0.6 }}
+                  whileHover={{ x: 10 }}
+                  className="flex items-start gap-5 bg-white dark:bg-gray-800 p-6 rounded-2xl shadow-lg"
                 >
-                  <div className="w-12 h-12 bg-purple-100 dark:bg-purple-900 rounded-lg flex items-center justify-center flex-shrink-0">
-                    <FiPhone className="text-purple-600 dark:text-purple-400 text-xl" />
-                  </div>
+                  <motion.div
+                    whileHover={{ rotate: 360, scale: 1.1 }}
+                    transition={{ duration: 0.6 }}
+                    className="w-14 h-14 bg-gradient-to-br from-purple-100 to-pink-100 dark:from-purple-900/30 dark:to-pink-900/30 rounded-2xl flex items-center justify-center flex-shrink-0"
+                  >
+                    <FiPhone className="text-purple-600 dark:text-purple-400 text-2xl" />
+                  </motion.div>
                   <div>
-                    <h3 className="font-semibold font-display text-gray-900 dark:text-white mb-1">Phone</h3>
+                    <h3 className="font-semibold font-display text-gray-900 dark:text-white mb-2 text-lg">Phone</h3>
                     <p className="text-gray-600 dark:text-gray-400 font-body">+91 98765 43210</p>
                     <p className="text-gray-600 dark:text-gray-400 font-body">+91 12345 67890</p>
                   </div>
@@ -295,15 +371,20 @@ export default function Contact() {
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
-                  transition={{ delay: 0.3, duration: 0.6 }}
-                  className="flex items-start gap-4"
+                  transition={{ delay: 0.5, duration: 0.6 }}
+                  whileHover={{ x: 10 }}
+                  className="flex items-start gap-5 bg-white dark:bg-gray-800 p-6 rounded-2xl shadow-lg"
                 >
-                  <div className="w-12 h-12 bg-purple-100 dark:bg-purple-900 rounded-lg flex items-center justify-center flex-shrink-0">
-                    <FiMapPin className="text-purple-600 dark:text-purple-400 text-xl" />
-                  </div>
+                  <motion.div
+                    whileHover={{ rotate: 360, scale: 1.1 }}
+                    transition={{ duration: 0.6 }}
+                    className="w-14 h-14 bg-gradient-to-br from-purple-100 to-pink-100 dark:from-purple-900/30 dark:to-pink-900/30 rounded-2xl flex items-center justify-center flex-shrink-0"
+                  >
+                    <FiMapPin className="text-purple-600 dark:text-purple-400 text-2xl" />
+                  </motion.div>
                   <div>
-                    <h3 className="font-semibold font-display text-gray-900 dark:text-white mb-1">Location</h3>
-                    <p className="text-gray-600 dark:text-gray-400 font-body">
+                    <h3 className="font-semibold font-display text-gray-900 dark:text-white mb-2 text-lg">Location</h3>
+                    <p className="text-gray-600 dark:text-gray-400 font-body leading-relaxed">
                       Vedprakash Lohia<br />
                       House No-181, Room B9, 5th Floor<br />
                       Ghitorni, New Delhi<br />

@@ -221,42 +221,104 @@ export default function Home() {
                 transition={{ duration: 0.6 }}
                 className="text-center mb-12"
               >
-                <h2 className="text-3xl md:text-4xl font-bold font-heading text-gray-900 dark:text-white mb-4">
+                <motion.h2 
+                  className="text-4xl md:text-5xl lg:text-6xl font-bold font-heading text-gray-900 dark:text-white mb-4"
+                  initial={{ backgroundPosition: '0% 50%' }}
+                  animate={{ backgroundPosition: '100% 50%' }}
+                  transition={{ duration: 3, repeat: Infinity, ease: 'linear' }}
+                  style={{
+                    background: 'linear-gradient(135deg, #667eea 0%, #764ba2 25%, #f093fb 50%, #f5576c 75%, #4facfe 100%)',
+                    backgroundSize: '200% auto',
+                    WebkitBackgroundClip: 'text',
+                    WebkitTextFillColor: 'transparent',
+                    backgroundClip: 'text'
+                  }}
+                >
                   Featured Works
-                </h2>
-                <p className="text-base md:text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto font-body">
+                </motion.h2>
+                <motion.p 
+                  className="text-base md:text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto font-body"
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ delay: 0.2 }}
+                >
                   Discover our handpicked selection of exceptional paintings from talented Indian artists
-                </p>
+                </motion.p>
               </motion.div>
 
-              <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 mb-12">
+              <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 mb-12">
                 {categoryItems.map((item, index) => (
-                  <div key={index} className="relative aspect-square overflow-hidden rounded-lg group">
-                    <Image
-                      src={item.image}
-                      alt={item.title}
-                      fill
-                      sizes="(max-width: 768px) 50vw, (max-width: 1024px) 33vw, 16vw"
-                      loading="lazy"
-                      className="object-cover"
+                  <motion.div
+                    key={index}
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: index * 0.1, duration: 0.5 }}
+                    className="relative aspect-square overflow-hidden rounded-2xl group cursor-pointer"
+                  >
+                    <motion.div
+                      whileHover={{ scale: 1.1 }}
+                      transition={{ duration: 0.4 }}
+                      className="relative w-full h-full"
+                    >
+                      <Image
+                        src={item.image}
+                        alt={item.title}
+                        fill
+                        sizes="(max-width: 768px) 50vw, (max-width: 1024px) 33vw, 16vw"
+                        loading="lazy"
+                        className="object-cover"
+                      />
+                    </motion.div>
+                    <motion.div
+                      className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                      initial={{ opacity: 0 }}
+                      whileHover={{ opacity: 1 }}
                     />
-                  </div>
+                    <motion.div
+                      className="absolute bottom-0 left-0 right-0 p-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                      initial={{ y: 20 }}
+                      whileHover={{ y: 0 }}
+                    >
+                      <p className="text-white font-semibold text-sm font-display">{item.title}</p>
+                      <p className="text-gray-300 text-xs">{item.description}</p>
+                    </motion.div>
+                    <motion.div
+                      className="absolute inset-0 border-2 border-transparent group-hover:border-purple-500/50 rounded-2xl transition-colors duration-300"
+                    />
+                  </motion.div>
                 ))}
               </div>
 
               <motion.div
-                initial={{ opacity: 0 }}
-                whileInView={{ opacity: 1 }}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ delay: 0.4, duration: 0.6 }}
+                transition={{ delay: 0.6, duration: 0.6 }}
                 className="text-center"
               >
-                <Link
-                  href="/gallery"
-                  className="inline-flex items-center gap-2 px-8 py-3 bg-gray-900 dark:bg-white text-white dark:text-gray-900 rounded-full font-semibold hover:bg-gray-800 dark:hover:bg-gray-100 transition-colors"
+                <motion.div
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
                 >
-                  View All Paintings <FiArrowRight />
-                </Link>
+                  <Link
+                    href="/gallery"
+                    className="inline-flex items-center gap-3 px-10 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-full font-semibold shadow-xl hover:shadow-2xl transition-all duration-300 group relative overflow-hidden"
+                  >
+                    <motion.span
+                      className="absolute inset-0 bg-gradient-to-r from-pink-600 to-purple-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                    />
+                    <span className="relative z-10 flex items-center gap-3">
+                      View All Paintings 
+                      <motion.span
+                        animate={{ x: [0, 5, 0] }}
+                        transition={{ duration: 1.5, repeat: Infinity }}
+                      >
+                        <FiArrowRight />
+                      </motion.span>
+                    </span>
+                  </Link>
+                </motion.div>
               </motion.div>
             </>
           )}

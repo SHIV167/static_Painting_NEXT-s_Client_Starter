@@ -67,21 +67,38 @@ export default function Exhibitions() {
       </section>
 
       {/* Exhibitions List */}
-      <section className="py-20 px-4">
-        <div className="max-w-7xl mx-auto">
+      <section className="py-24 px-4 bg-gray-50 dark:bg-gray-900 relative overflow-hidden">
+        {/* Background Decorative Elements */}
+        <div className="absolute top-0 left-0 w-96 h-96 bg-purple-500/5 rounded-full blur-3xl" />
+        <div className="absolute bottom-0 right-0 w-96 h-96 bg-pink-500/5 rounded-full blur-3xl" />
+        
+        <div className="max-w-7xl mx-auto relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="mb-12"
+            className="mb-16"
           >
-            <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">
+            <motion.h2 
+              className="text-4xl md:text-5xl lg:text-6xl font-bold font-heading text-gray-900 dark:text-white mb-6"
+              style={{
+                background: 'linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%)',
+                WebkitBackgroundClip: 'text',
+                WebkitTextFillColor: 'transparent',
+                backgroundClip: 'text'
+              }}
+            >
               Featured Exhibitions
-            </h2>
-            <p className="text-gray-600 dark:text-gray-400 max-w-2xl">
+            </motion.h2>
+            <motion.p 
+              className="text-lg md:text-xl text-gray-600 dark:text-gray-400 max-w-2xl"
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              transition={{ delay: 0.2 }}
+            >
               Discover the art shows and exhibitions where our work has been featured
-            </p>
+            </motion.p>
           </motion.div>
 
           <div className="space-y-12">
@@ -91,41 +108,73 @@ export default function Exhibitions() {
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ delay: index * 0.05, duration: 0.6 }}
-                className="bg-white dark:bg-gray-800 rounded-2xl shadow-lg overflow-hidden"
+                transition={{ delay: index * 0.1, duration: 0.6 }}
+                whileHover={{ y: -5 }}
+                className="bg-white dark:bg-gray-800 rounded-3xl shadow-2xl overflow-hidden group"
               >
                 <div className="grid grid-cols-1 lg:grid-cols-2">
-                  <div className="relative h-64 lg:h-auto">
+                  <motion.div 
+                    className="relative h-80 lg:h-auto overflow-hidden"
+                    whileHover={{ scale: 1.02 }}
+                    transition={{ duration: 0.4 }}
+                  >
                     <Image
                       src={exhibition.image}
                       alt={exhibition.title}
                       fill
                       className="object-cover"
                     />
-                  </div>
+                    <motion.div
+                      className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+                    />
+                  </motion.div>
                   
-                  <div className="p-8 lg:p-12 flex flex-col justify-center">
-                    <div className="flex items-center gap-2 text-purple-600 dark:text-purple-400 mb-4">
-                      <FiCalendar />
-                      <span className="font-semibold">{exhibition.date}</span>
-                    </div>
+                  <div className="p-8 lg:p-12 flex flex-col justify-center relative">
+                    <motion.div
+                      className="flex items-center gap-3 text-purple-600 dark:text-purple-400 mb-6"
+                      whileHover={{ x: 5 }}
+                      transition={{ duration: 0.3 }}
+                    >
+                      <motion.div
+                        whileHover={{ rotate: 360 }}
+                        transition={{ duration: 0.6 }}
+                        className="w-10 h-10 rounded-xl bg-gradient-to-br from-purple-100 to-pink-100 dark:from-purple-900/30 dark:to-pink-900/30 flex items-center justify-center"
+                      >
+                        <FiCalendar />
+                      </motion.div>
+                      <span className="font-semibold text-lg">{exhibition.date}</span>
+                    </motion.div>
                     
-                    <h3 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">
+                    <h3 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-6 font-heading">
                       {exhibition.title}
                     </h3>
                     
-                    <div className="flex items-center gap-2 text-gray-600 dark:text-gray-400 mb-6">
-                      <FiMapPin />
-                      <span>{exhibition.venue}</span>
-                    </div>
+                    <motion.div
+                      className="flex items-center gap-3 text-gray-600 dark:text-gray-400 mb-6"
+                      whileHover={{ x: 5 }}
+                      transition={{ duration: 0.3 }}
+                    >
+                      <motion.div
+                        whileHover={{ rotate: 360 }}
+                        transition={{ duration: 0.6 }}
+                        className="w-10 h-10 rounded-xl bg-gradient-to-br from-purple-100 to-pink-100 dark:from-purple-900/30 dark:to-pink-900/30 flex items-center justify-center"
+                      >
+                        <FiMapPin />
+                      </motion.div>
+                      <span className="text-lg">{exhibition.venue}</span>
+                    </motion.div>
                     
-                    <p className="text-gray-600 dark:text-gray-400 mb-6 leading-relaxed">
+                    <p className="text-gray-600 dark:text-gray-400 mb-8 leading-relaxed text-lg">
                       {exhibition.description}
                     </p>
                     
-                    <button className="inline-flex items-center gap-2 text-purple-600 dark:text-purple-400 font-semibold hover:text-purple-700 dark:hover:text-purple-300 transition-colors">
+                    <motion.button
+                      whileHover={{ scale: 1.05, x: 5 }}
+                      whileTap={{ scale: 0.95 }}
+                      className="inline-flex items-center gap-3 px-6 py-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-xl font-semibold shadow-lg hover:shadow-xl transition-all duration-300"
+                    >
                       Learn More <FiArrowRight />
-                    </button>
+                    </motion.button>
                   </div>
                 </div>
               </motion.div>
@@ -133,37 +182,49 @@ export default function Exhibitions() {
           </div>
 
           {/* Pagination */}
-          <div className="flex items-center justify-center gap-2 mt-12">
-            <button
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.4 }}
+            className="flex items-center justify-center gap-3 mt-16"
+          >
+            <motion.button
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.95 }}
               onClick={() => setCurrentPage(prev => Math.max(prev - 1, 1))}
               disabled={currentPage === 1}
-              className="w-10 h-10 rounded-lg flex items-center justify-center bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 text-gray-900 dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+              className="w-12 h-12 rounded-xl flex items-center justify-center bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 text-gray-900 dark:text-white hover:bg-gradient-to-r hover:from-purple-600 hover:to-pink-600 hover:text-white hover:border-transparent disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:bg-white disabled:hover:text-gray-900 transition-all duration-300 shadow-lg"
             >
               <FiChevronLeft />
-            </button>
+            </motion.button>
             
             {Array.from({ length: totalPages }, (_, i) => i + 1).map(page => (
-              <button
+              <motion.button
                 key={page}
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.95 }}
                 onClick={() => setCurrentPage(page)}
-                className={`w-10 h-10 rounded-lg flex items-center justify-center font-medium transition-colors ${
+                className={`w-12 h-12 rounded-xl flex items-center justify-center font-medium transition-all duration-300 shadow-lg ${
                   currentPage === page
-                    ? 'bg-purple-600 text-white'
-                    : 'bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 text-gray-900 dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700'
+                    ? 'bg-gradient-to-r from-purple-600 to-pink-600 text-white'
+                    : 'bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 text-gray-900 dark:text-white hover:bg-gradient-to-r hover:from-purple-600 hover:to-pink-600 hover:text-white hover:border-transparent'
                 }`}
               >
                 {page}
-              </button>
+              </motion.button>
             ))}
             
-            <button
+            <motion.button
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.95 }}
               onClick={() => setCurrentPage(prev => Math.min(prev + 1, totalPages))}
               disabled={currentPage === totalPages}
-              className="w-10 h-10 rounded-lg flex items-center justify-center bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 text-gray-900 dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+              className="w-12 h-12 rounded-xl flex items-center justify-center bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 text-gray-900 dark:text-white hover:bg-gradient-to-r hover:from-purple-600 hover:to-pink-600 hover:text-white hover:border-transparent disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:bg-white disabled:hover:text-gray-900 transition-all duration-300 shadow-lg"
             >
               <FiChevronRight />
-            </button>
-          </div>
+            </motion.button>
+          </motion.div>
         </div>
       </section>
 
