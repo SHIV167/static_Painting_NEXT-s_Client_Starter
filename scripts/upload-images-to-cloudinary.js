@@ -28,8 +28,8 @@ const localFilesToUpload = [
     publicId: 'artist-profile'
   },
   {
-    path: path.join(__dirname, '../public/logo.png'),
-    publicId: 'logo'
+    path: path.join(__dirname, '../public/logo-transparent.png'),
+    publicId: 'logo-transparent'
   }
 ];
 

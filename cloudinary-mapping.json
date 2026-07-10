@@ -7,14 +7,14 @@
       "success": true
     },
     {
-      "originalPath": "E:\\painting_static\\public\\logo.png",
-      "publicId": "art-gallery/logo",
-      "cloudinaryUrl": "https://res.cloudinary.com/dj15ypnx8/image/upload/v1783709613/art-gallery/logo.png",
+      "originalPath": "E:\\painting_static\\public\\logo-transparent.png",
+      "publicId": "art-gallery/logo-transparent",
+      "cloudinaryUrl": "https://res.cloudinary.com/dj15ypnx8/image/upload/v1783710797/art-gallery/logo-transparent.png",
       "success": true
     }
   ],
   "urlMapping": {
     "E:\\painting_static\\public\\artist-profile.webp": "https://res.cloudinary.com/dj15ypnx8/image/upload/v1783708145/art-gallery/artist-profile.webp",
-    "E:\\painting_static\\public\\logo.png": "https://res.cloudinary.com/dj15ypnx8/image/upload/v1783709613/art-gallery/logo.png"
+    "E:\\painting_static\\public\\logo-transparent.png": "https://res.cloudinary.com/dj15ypnx8/image/upload/v1783710797/art-gallery/logo-transparent.png"
   }
 }
