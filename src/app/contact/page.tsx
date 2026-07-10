@@ -80,7 +80,7 @@ export default function Contact() {
           priority
           className="object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/50 to-transparent" />
         
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -88,11 +88,11 @@ export default function Contact() {
           transition={{ duration: 0.8 }}
           className="relative z-10 text-center px-4 flex items-center justify-center h-full"
         >
-          <div>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold font-heading text-white mb-4">
+          <div className="max-w-4xl mx-auto">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold font-heading text-white mb-4 leading-tight">
               Contact Us
             </h1>
-            <p className="text-base md:text-lg lg:text-xl text-gray-200 font-body">
+            <p className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-200 font-body">
               Get in touch with us for inquiries, commissions, or collaborations
             </p>
           </div>
