@@ -118,5 +118,5 @@ export const artistInfo = {
     'Featured at Nicholas Roerich Art Gallery (2026)',
     'Instagram: @_shadesnstrokes'
   ],
-  image: 'https://instagram.fdel1-3.fna.fbcdn.net/v/t51.82787-19/536386137_17933733462073055_4450987526872622735_n.jpg?efg=eyJ2ZW5jb2RlX3RhZyI6InByb2ZpbGVfcGljLmRqYW5nby4xMDgwLmMyIn0&_nc_ht=instagram.fdel1-3.fna.fbcdn.net&_nc_cat=111&_nc_oc=Q6cZ2gFm95gSPQW6CYExMSSRJXyI1rERo18zKICuGvY5xEVEu0FA4eg9WFIHqQLUxXmfdUr-_gfqZcuehfaMU58cdya4&_nc_ohc=Cyqs6SKCD2cQ7kNvwHqWbvM&_nc_gid=CWRWS3i5ahTSQjtrIINxVQ&edm=APoiHPcBAAAA&ccb=7-5&oh=00_AQAJTsUoOymwedbtg02XyFlJw3OtQCr3evUJuu03uR9oYA&oe=6A4F344D&_nc_sid=22de04'
+  image: 'https://res.cloudinary.com/dj15ypnx8/image/upload/v1783708145/art-gallery/artist-profile.webp'
 };
