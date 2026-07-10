@@ -26,6 +26,10 @@ const localFilesToUpload = [
   {
     path: path.join(__dirname, '../public/artist-profile.webp'),
     publicId: 'artist-profile'
+  },
+  {
+    path: path.join(__dirname, '../public/logo.png'),
+    publicId: 'logo'
   }
 ];
 

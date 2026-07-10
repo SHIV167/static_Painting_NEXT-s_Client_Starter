@@ -14,7 +14,7 @@ export default function Footer() {
             <div className="flex items-center gap-3 mb-6">
               <div className="relative w-10 h-10">
                 <img
-                  src="/logo.png"
+                  src="https://res.cloudinary.com/dj15ypnx8/image/upload/v1783709613/art-gallery/logo.png"
                   alt="Heena Chowdhary Logo"
                   width={40}
                   height={40}
