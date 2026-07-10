@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination, Autoplay, EffectFade } from 'swiper/modules';
 import Image from 'next/image';
@@ -23,12 +23,8 @@ interface HeroSliderProps {
 }
 
 export default function HeroSlider({ slides, autoplay = true, autoplayDelay = 5000 }: HeroSliderProps) {
-  const [mounted, setMounted] = useState(false);
+  const [mounted] = useState(true);
   const [activeSlide, setActiveSlide] = useState(0);
-
-  useEffect(() => {
-    setMounted(true);
-  }, []);
 
   if (!mounted) {
     return (

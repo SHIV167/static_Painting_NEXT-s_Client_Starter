@@ -351,7 +351,7 @@ export default function About() {
                 animate={{ opacity: [0.2, 0.4, 0.2] }}
                 transition={{ duration: 3, repeat: Infinity }}
               >
-                "
+                &ldquo;
               </motion.div>
               <blockquote className="text-xl md:text-3xl text-white/95 italic leading-relaxed font-body relative z-10 px-8">
                 All that surrounds you is ART..just keep a keen eye and an open heart. Through my multidisciplinary approach, I create pieces that transform spaces and connect with viewers on a deeply personal level.
@@ -361,7 +361,7 @@ export default function About() {
                 animate={{ opacity: [0.2, 0.4, 0.2] }}
                 transition={{ duration: 3, repeat: Infinity, delay: 1.5 }}
               >
-                "
+                &rdquo;
               </motion.div>
             </motion.div>
             <motion.p 

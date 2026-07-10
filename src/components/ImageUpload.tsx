@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useRef } from 'react';
-import { FiUpload, FiX, FiImage, FiLoader } from 'react-icons/fi';
+import { FiUpload, FiX, FiLoader } from 'react-icons/fi';
 
 interface ImageUploadProps {
   onUploadComplete: (url: string, publicId: string) => void;
@@ -73,7 +73,7 @@ export default function ImageUpload({
         setError(data.error || 'Upload failed');
         setPreview(null);
       }
-    } catch (err) {
+    } catch {
       setError('Upload failed. Please try again.');
       setPreview(null);
     } finally {

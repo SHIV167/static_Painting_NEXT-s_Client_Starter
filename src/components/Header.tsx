@@ -4,7 +4,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useState, useEffect } from 'react';
-import { FiMenu, FiX, FiHome, FiImage, FiUser, FiCalendar, FiMail } from 'react-icons/fi';
+import { FiMenu, FiX, FiImage, FiUser, FiCalendar, FiMail } from 'react-icons/fi';
 import { theme } from '@/lib/theme';
 import { HeaderSkeleton } from '@/components/Skeleton';
 

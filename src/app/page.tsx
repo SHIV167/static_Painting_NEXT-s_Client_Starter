@@ -4,17 +4,14 @@ import { motion } from 'framer-motion';
 import Link from 'next/link';
 import Image from 'next/image';
 import { paintings } from '@/lib/data';
-import { FiArrowRight, FiEye, FiPlay, FiX } from 'react-icons/fi';
+import { FiArrowRight, FiX } from 'react-icons/fi';
 import HeroSlider from '@/components/HeroSlider';
 import VideoCardSlider from '@/components/VideoCardSlider';
 import { useState, useEffect } from 'react';
 import Skeleton, { HeroSkeleton, CategoryCardSkeleton, AboutSectionSkeleton, CTASkeleton } from '@/components/Skeleton';
 
 export default function Home() {
-  const featuredPaintings = paintings.slice(0, 3);
   const [isVideoOpen, setIsVideoOpen] = useState(false);
-  const [videoUrl, setVideoUrl] = useState('https://www.youtube.com/embed/VFrK2TM3gjk?autoplay=1');
-  const [thumbnailError, setThumbnailError] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
 
   const videoCards = [

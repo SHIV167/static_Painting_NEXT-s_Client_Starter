@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { FiMail, FiMapPin, FiPhone, FiSend } from 'react-icons/fi';
 import toast, { Toaster } from 'react-hot-toast';
 import Image from 'next/image';
@@ -132,7 +132,7 @@ export default function Contact() {
                 whileInView={{ opacity: 1 }}
                 transition={{ delay: 0.2 }}
               >
-                We'd love to hear from you. Fill out the form below and we'll get back to you within 24-48 hours.
+                We&apos;d love to hear from you. Fill out the form below and we&apos;ll get back to you within 24-48 hours.
               </motion.p>
               
               <form onSubmit={handleSubmit} className="space-y-6">
@@ -261,7 +261,7 @@ export default function Contact() {
                       </motion.div>
                       <div>
                         <p className="font-semibold text-green-800 dark:text-green-300">Message Sent Successfully!</p>
-                        <p className="text-sm text-green-600 dark:text-green-400">We'll get back to you within 24-48 hours.</p>
+                        <p className="text-sm text-green-600 dark:text-green-400">We&apos;ll get back to you within 24-48 hours.</p>
                       </div>
                     </div>
                   </motion.div>
