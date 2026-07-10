@@ -23,23 +23,7 @@ const nextConfig = {
       },
       {
         protocol: 'https',
-        hostname: 'instagram.fdel1-3.fna.fbcdn.net',
-      },
-      {
-        protocol: 'https',
-        hostname: 'instagram.fdel1-4.fna.fbcdn.net',
-      },
-      {
-        protocol: 'https',
-        hostname: 'instagram.fdel1-5.fna.fbcdn.net',
-      },
-      {
-        protocol: 'https',
-        hostname: 'instagram.fdel1-6.fna.fbcdn.net',
-      },
-      {
-        protocol: 'https',
-        hostname: 'instagram.fdel1-8.fna.fbcdn.net',
+        hostname: '**.fbcdn.net',
       },
     ],
   },
