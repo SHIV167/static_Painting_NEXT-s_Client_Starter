@@ -49,29 +49,6 @@ export default function About() {
             transition={{ duration: 0.6 }}
             className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center"
           >
-            <div className="relative">
-              <div className="relative h-[500px] rounded-2xl overflow-hidden shadow-2xl">
-                <Image
-                  src={artistInfo.image}
-                  alt={artistInfo.name}
-                  fill
-                  sizes="(max-width: 1024px) 100vw, 50vw"
-                  loading="lazy"
-                  className="object-cover"
-                />
-              </div>
-              <motion.div
-                initial={{ opacity: 0, scale: 0.8 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true }}
-                transition={{ delay: 0.3, duration: 0.6 }}
-                className="absolute -bottom-6 -right-6 bg-gradient-to-r from-purple-600 to-pink-600 text-white p-6 rounded-2xl shadow-xl"
-              >
-                <p className="text-4xl font-bold">15+</p>
-                <p className="text-sm">Years Experience</p>
-              </motion.div>
-            </div>
-
             <div>
               <motion.h2
                 initial={{ opacity: 0, y: 20 }}
@@ -129,6 +106,29 @@ export default function About() {
                     ))}
                   </ul>
                 </div>
+              </motion.div>
+            </div>
+
+            <div className="relative">
+              <div className="relative h-[500px] rounded-2xl overflow-hidden shadow-2xl">
+                <Image
+                  src={artistInfo.image}
+                  alt={artistInfo.name}
+                  fill
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                  loading="lazy"
+                  className="object-cover"
+                />
+              </div>
+              <motion.div
+                initial={{ opacity: 0, scale: 0.8 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.3, duration: 0.6 }}
+                className="absolute -bottom-6 -right-6 bg-gradient-to-r from-purple-600 to-pink-600 text-white p-6 rounded-2xl shadow-xl"
+              >
+                <p className="text-4xl font-bold">15+</p>
+                <p className="text-sm">Years Experience</p>
               </motion.div>
             </div>
           </motion.div>
