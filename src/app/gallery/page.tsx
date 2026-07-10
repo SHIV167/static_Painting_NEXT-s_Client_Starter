@@ -121,27 +121,6 @@ export default function Gallery() {
                   className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"
                 />
                 <motion.div
-                  className="absolute bottom-0 left-0 right-0 p-6 opacity-0 group-hover:opacity-100 transition-opacity duration-500"
-                  initial={{ y: 20 }}
-                  whileHover={{ y: 0 }}
-                >
-                  <motion.p 
-                    className="text-white font-semibold text-lg font-display mb-2"
-                    initial={{ opacity: 0 }}
-                    whileHover={{ opacity: 1 }}
-                  >
-                    {item.title}
-                  </motion.p>
-                  <motion.p 
-                    className="text-gray-300 text-sm"
-                    initial={{ opacity: 0 }}
-                    whileHover={{ opacity: 1 }}
-                    transition={{ delay: 0.1 }}
-                  >
-                    {item.description}
-                  </motion.p>
-                </motion.div>
-                <motion.div
                   className="absolute inset-0 border-2 border-transparent group-hover:border-purple-500/50 rounded-3xl transition-colors duration-500"
                 />
               </motion.div>
