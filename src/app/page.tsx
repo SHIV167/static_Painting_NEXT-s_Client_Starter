@@ -18,7 +18,7 @@ export default function Home() {
   const videoCards = [
     {
       id: '1',
-      thumbnail: 'https://res.cloudinary.com/dj15ypnx8/image/upload/v1782740749/art-gallery/photo-1579783902614-a3fb3927b6a5.jpg',
+      thumbnail: 'https://res.cloudinary.com/dj15ypnx8/image/upload/v1783708461/673122680_17962021311073055_1029815282776648670_n_sa6fm3.webp',
       videoUrl: 'https://www.w3schools.com/html/mov_bbb.mp4',
       title: 'Portrait Painting - Face Art Process',
       artist: 'heena_chowdhary',
@@ -28,7 +28,7 @@ export default function Home() {
     },
     {
       id: '2',
-      thumbnail: 'https://res.cloudinary.com/dj15ypnx8/image/upload/v1782740750/art-gallery/photo-1541961017774-22349e4a1262.jpg',
+      thumbnail: 'https://res.cloudinary.com/dj15ypnx8/image/upload/v1783708461/496482346_17922039069073055_1015974517690005411_n_1_zqqgno.webp',
       videoUrl: 'https://www.w3schools.com/html/mov_bbb.mp4',
       title: 'Face Expression - Art Creation',
       artist: 'heena_chowdhary',
@@ -38,7 +38,7 @@ export default function Home() {
     },
     {
       id: '3',
-      thumbnail: 'https://res.cloudinary.com/dj15ypnx8/image/upload/v1782740751/art-gallery/photo-1578301978693-85fa9c0320b9.jpg',
+      thumbnail: 'https://res.cloudinary.com/dj15ypnx8/image/upload/v1783708460/496482346_17922039069073055_1015974517690005411_n_n5rgae.webp',
       videoUrl: 'https://www.w3schools.com/html/mov_bbb.mp4',
       title: 'Human Face - Painting Journey',
       artist: 'heena_chowdhary',
@@ -48,7 +48,7 @@ export default function Home() {
     },
     {
       id: '4',
-      thumbnail: 'https://res.cloudinary.com/dj15ypnx8/image/upload/v1782740752/art-gallery/photo-1507003211169-0a1dd7228f2d.jpg',
+      thumbnail: 'https://res.cloudinary.com/dj15ypnx8/image/upload/v1783708460/525670560_17931745401073055_8114132161065609663_n_lso2fi.webp',
       videoUrl: 'https://www.w3schools.com/html/mov_bbb.mp4',
       title: 'Portrait Mastery - Behind Scenes',
       artist: 'heena_chowdhary',
@@ -58,7 +58,7 @@ export default function Home() {
     },
     {
       id: '5',
-      thumbnail: 'https://res.cloudinary.com/dj15ypnx8/image/upload/v1782740753/art-gallery/photo-1547891654-e66ed7ebb968.jpg',
+      thumbnail: 'https://res.cloudinary.com/dj15ypnx8/image/upload/v1783708460/525670560_17931745401073055_8114132161065609663_n_lso2fi.webp',
       videoUrl: 'https://www.w3schools.com/html/mov_bbb.mp4',
       title: 'Face Art - Studio Session',
       artist: 'heena_chowdhary',
@@ -68,53 +68,13 @@ export default function Home() {
     },
     {
       id: '6',
-      thumbnail: 'https://res.cloudinary.com/dj15ypnx8/image/upload/v1782740753/art-gallery/photo-1578926288207-a90a5366759d.jpg',
+      thumbnail: 'https://res.cloudinary.com/dj15ypnx8/image/upload/v1783708461/496482346_17922039069073055_1015974517690005411_n_1_zqqgno.webp',
       videoUrl: 'https://www.w3schools.com/html/mov_bbb.mp4',
       title: 'Portrait Detail - Art Process',
       artist: 'heena_chowdhary',
       location: 'Delhi, India',
       likes: 198,
       comments: 35
-    },
-    {
-      id: '7',
-      thumbnail: 'https://res.cloudinary.com/dj15ypnx8/image/upload/v1782740754/art-gallery/photo-1577720580479-7d839d829c73.jpg',
-      videoUrl: 'https://www.w3schools.com/html/mov_bbb.mp4',
-      title: 'Human Expression - Time Lapse',
-      artist: 'heena_chowdhary',
-      location: 'Delhi, India',
-      likes: 345,
-      comments: 52
-    },
-    {
-      id: '8',
-      thumbnail: 'https://res.cloudinary.com/dj15ypnx8/image/upload/v1782740755/art-gallery/photo-1561214115-f2f134cc4912.jpg',
-      videoUrl: 'https://www.w3schools.com/html/mov_bbb.mp4',
-      title: 'Face Painting - Art Creation',
-      artist: 'heena_chowdhary',
-      location: 'Delhi, India',
-      likes: 267,
-      comments: 38
-    },
-    {
-      id: '9',
-      thumbnail: 'https://res.cloudinary.com/dj15ypnx8/image/upload/v1782740756/art-gallery/photo-1544531586-fde5298cdd40.jpg',
-      videoUrl: 'https://www.w3schools.com/html/mov_bbb.mp4',
-      title: 'Portrait Commission - Behind Scenes',
-      artist: 'heena_chowdhary',
-      location: 'Delhi, India',
-      likes: 412,
-      comments: 63
-    },
-    {
-      id: '10',
-      thumbnail: 'https://res.cloudinary.com/dj15ypnx8/image/upload/v1782740757/art-gallery/photo-1494790108377-be9c29b29330.jpg',
-      videoUrl: 'https://www.w3schools.com/html/mov_bbb.mp4',
-      title: 'Face Art Studio - Process Video',
-      artist: 'heena_chowdhary',
-      location: 'Delhi, India',
-      likes: 389,
-      comments: 57
     }
   ];
 

@@ -64,14 +64,31 @@ export default function VideoCardSlider({ videos, heading, subheading }: VideoCa
       {(heading || subheading) && (
         <div className="mb-6 text-center">
           {heading && (
-            <h2 className="text-2xl md:text-3xl font-bold font-heading text-gray-900 dark:text-white mb-2">
+            <motion.h2 
+              className="text-4xl md:text-5xl lg:text-6xl font-bold font-heading text-gray-900 dark:text-white mb-4"
+              initial={{ backgroundPosition: '0% 50%' }}
+              animate={{ backgroundPosition: '100% 50%' }}
+              transition={{ duration: 3, repeat: Infinity, ease: 'linear' }}
+              style={{
+                background: 'linear-gradient(135deg, #667eea 0%, #764ba2 25%, #f093fb 50%, #f5576c 75%, #4facfe 100%)',
+                backgroundSize: '200% auto',
+                WebkitBackgroundClip: 'text',
+                WebkitTextFillColor: 'transparent',
+                backgroundClip: 'text'
+              }}
+            >
               {heading}
-            </h2>
+            </motion.h2>
           )}
           {subheading && (
-            <p className="text-sm md:text-base text-gray-600 dark:text-gray-400 font-body">
+            <motion.p 
+              className="text-base md:text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto font-body"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.2 }}
+            >
               {subheading}
-            </p>
+            </motion.p>
           )}
         </div>
       )}

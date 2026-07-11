@@ -1,17 +1,65 @@
 'use client';
 
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import Image from 'next/image';
-import { paintings } from '@/lib/data';
+import { useState } from 'react';
+import { FiX, FiChevronLeft, FiChevronRight } from 'react-icons/fi';
 
 export default function Gallery() {
   const heroBanner = 'https://res.cloudinary.com/dj15ypnx8/image/upload/v1783710797/art-gallery/logo-transparent.png';
+  const [selectedImage, setSelectedImage] = useState<number | null>(null);
 
-  const categoryItems = paintings.map(painting => ({
-    image: painting.imageUrl,
-    title: painting.title,
-    description: painting.description
-  }));
+  const categoryItems = [
+    {
+      image: 'https://res.cloudinary.com/dj15ypnx8/image/upload/v1783708461/673122680_17962021311073055_1029815282776648670_n_sa6fm3.webp',
+      title: 'Featured Art 1',
+      description: 'Artwork from Instagram'
+    },
+    {
+      image: 'https://res.cloudinary.com/dj15ypnx8/image/upload/v1783708461/496482346_17922039069073055_1015974517690005411_n_1_zqqgno.webp',
+      title: 'Featured Art 2',
+      description: 'Artwork from Instagram'
+    },
+    {
+      image: 'https://res.cloudinary.com/dj15ypnx8/image/upload/v1783708460/496482346_17922039069073055_1015974517690005411_n_n5rgae.webp',
+      title: 'Featured Art 3',
+      description: 'Artwork from Instagram'
+    },
+    {
+      image: 'https://res.cloudinary.com/dj15ypnx8/image/upload/v1783708460/525670560_17931745401073055_8114132161065609663_n_lso2fi.webp',
+      title: 'Featured Art 4',
+      description: 'Artwork from Instagram'
+    },
+    {
+      image: 'https://res.cloudinary.com/dj15ypnx8/image/upload/v1783708460/525670560_17931745401073055_8114132161065609663_n_lso2fi.webp',
+      title: 'Featured Art 5',
+      description: 'Artwork from Instagram'
+    },
+    {
+      image: 'https://res.cloudinary.com/dj15ypnx8/image/upload/v1783708461/496482346_17922039069073055_1015974517690005411_n_1_zqqgno.webp',
+      title: 'Featured Art 6',
+      description: 'Artwork from Instagram'
+    }
+  ];
+
+  const handlePrevious = () => {
+    if (selectedImage !== null) {
+      setSelectedImage((selectedImage - 1 + categoryItems.length) % categoryItems.length);
+    }
+  };
+
+  const handleNext = () => {
+    if (selectedImage !== null) {
+      setSelectedImage((selectedImage + 1) % categoryItems.length);
+    }
+  };
+
+  const handleKeyDown = (e: React.KeyboardEvent) => {
+    if (selectedImage === null) return;
+    if (e.key === 'ArrowLeft') handlePrevious();
+    if (e.key === 'ArrowRight') handleNext();
+    if (e.key === 'Escape') setSelectedImage(null);
+  };
 
   return (
     <div className="min-h-screen bg-gray-50 dark:bg-gray-900">
@@ -88,6 +136,7 @@ export default function Gallery() {
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1, duration: 0.6 }}
                 className="relative aspect-square overflow-hidden rounded-3xl shadow-2xl group cursor-pointer"
+                onClick={() => setSelectedImage(index)}
               >
                 <motion.div
                   whileHover={{ scale: 1.1 }}
@@ -135,6 +184,89 @@ export default function Gallery() {
           </div>
         </div>
       </section>
+
+      {/* Lightbox Modal */}
+      <AnimatePresence>
+        {selectedImage !== null && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.3 }}
+            className="fixed inset-0 z-50 flex items-center justify-center bg-black/95 p-4"
+            onClick={() => setSelectedImage(null)}
+            onKeyDown={handleKeyDown}
+            tabIndex={0}
+          >
+            <motion.div
+              initial={{ scale: 0.9, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              exit={{ scale: 0.9, opacity: 0 }}
+              transition={{ duration: 0.3 }}
+              className="relative w-full max-w-5xl max-h-[90vh]"
+              onClick={(e) => e.stopPropagation()}
+            >
+              <button
+                onClick={() => setSelectedImage(null)}
+                className="absolute -top-12 right-0 text-white hover:text-gray-300 transition-colors z-10"
+                aria-label="Close lightbox"
+              >
+                <FiX size={32} />
+              </button>
+
+              <button
+                onClick={handlePrevious}
+                className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-12 text-white hover:text-gray-300 transition-colors z-10 hidden md:block"
+                aria-label="Previous image"
+              >
+                <FiChevronLeft size={40} />
+              </button>
+
+              <button
+                onClick={handleNext}
+                className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-12 text-white hover:text-gray-300 transition-colors z-10 hidden md:block"
+                aria-label="Next image"
+              >
+                <FiChevronRight size={40} />
+              </button>
+
+              <div className="relative w-full h-full flex items-center justify-center">
+                <Image
+                  src={categoryItems[selectedImage].image}
+                  alt={categoryItems[selectedImage].title}
+                  width={1200}
+                  height={1200}
+                  className="max-w-full max-h-[85vh] object-contain rounded-lg"
+                  priority
+                />
+              </div>
+
+              <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/80 to-transparent">
+                <h3 className="text-white text-xl font-semibold mb-1">{categoryItems[selectedImage].title}</h3>
+                <p className="text-gray-300 text-sm">{categoryItems[selectedImage].description}</p>
+              </div>
+
+              {/* Mobile navigation buttons */}
+              <div className="absolute bottom-20 left-0 right-0 flex justify-between px-4 md:hidden">
+                <button
+                  onClick={handlePrevious}
+                  className="bg-white/20 hover:bg-white/30 text-white p-3 rounded-full transition-colors"
+                  aria-label="Previous image"
+                >
+                  <FiChevronLeft size={24} />
+                </button>
+                <button
+                  onClick={handleNext}
+                  className="bg-white/20 hover:bg-white/30 text-white p-3 rounded-full transition-colors"
+                  aria-label="Next image"
+                >
+                  <FiChevronRight size={24} />
+                </button>
+              </div>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </div>
   );
 }
