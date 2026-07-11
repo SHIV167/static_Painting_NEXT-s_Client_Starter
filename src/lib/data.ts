@@ -76,6 +76,72 @@ export const paintings: Painting[] = [
     description: 'Delicate blue floral patterns creating a sense of calm and serenity.',
     imageUrl: 'https://res.cloudinary.com/dj15ypnx8/image/upload/v1782740753/art-gallery/photo-1578926288207-a90a5366759d.jpg',
     category: 'Still Life'
+  },
+  {
+    id: '7',
+    title: 'Golden Horizon',
+    artist: 'Heena Chowdhary',
+    year: 2026,
+    medium: 'Acrylic on Canvas',
+    dimensions: '36" x 48"',
+    description: 'A warm golden landscape capturing the essence of dawn breaking.',
+    imageUrl: 'https://res.cloudinary.com/dj15ypnx8/image/upload/v1782740754/art-gallery/photo-1577720580479-7d839d829c73.jpg',
+    category: 'Landscape'
+  },
+  {
+    id: '8',
+    title: 'Abstract Emotions',
+    artist: 'Heena Chowdhary',
+    year: 2026,
+    medium: 'Mixed Media',
+    dimensions: '30" x 40"',
+    description: 'An abstract representation of human emotions through color and form.',
+    imageUrl: 'https://res.cloudinary.com/dj15ypnx8/image/upload/v1782740755/art-gallery/photo-1561214115-f2f134cc4912.jpg',
+    category: 'Abstract'
+  },
+  {
+    id: '9',
+    title: 'Nature\'s Symphony',
+    artist: 'Heena Chowdhary',
+    year: 2026,
+    medium: 'Oil on Canvas',
+    dimensions: '40" x 50"',
+    description: 'A harmonious blend of natural elements in a symphony of colors.',
+    imageUrl: 'https://res.cloudinary.com/dj15ypnx8/image/upload/v1782740756/art-gallery/photo-1544531586-fde5298cdd40.jpg',
+    category: 'Landscape'
+  },
+  {
+    id: '10',
+    title: 'Portrait of Dreams',
+    artist: 'Heena Chowdhary',
+    year: 2026,
+    medium: 'Acrylic on Canvas',
+    dimensions: '24" x 30"',
+    description: 'A dreamlike portrait exploring the subconscious mind.',
+    imageUrl: 'https://res.cloudinary.com/dj15ypnx8/image/upload/v1782740757/art-gallery/photo-1494790108377-be9c29b29330.jpg',
+    category: 'Portrait'
+  },
+  {
+    id: '11',
+    title: 'Sunset Boulevard',
+    artist: 'Heena Chowdhary',
+    year: 2026,
+    medium: 'Oil on Canvas',
+    dimensions: '36" x 48"',
+    description: 'Urban sunset capturing the vibrant energy of city life.',
+    imageUrl: 'https://res.cloudinary.com/dj15ypnx8/image/upload/v1782740758/art-gallery/photo-1507003211169-0a1dd7228f2d.jpg',
+    category: 'Landscape'
+  },
+  {
+    id: '12',
+    title: 'Cosmic Dreams',
+    artist: 'Heena Chowdhary',
+    year: 2026,
+    medium: 'Acrylic on Canvas',
+    dimensions: '48" x 48"',
+    description: 'An exploration of cosmic themes through vibrant abstract patterns.',
+    imageUrl: 'https://res.cloudinary.com/dj15ypnx8/image/upload/v1782740759/art-gallery/photo-1547891654-e66ed7ebb968.jpg',
+    category: 'Abstract'
   }
 ];
 
