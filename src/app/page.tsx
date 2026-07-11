@@ -12,6 +12,7 @@ import Skeleton, { HeroSkeleton, CategoryCardSkeleton, AboutSectionSkeleton, CTA
 
 export default function Home() {
   const [isVideoOpen, setIsVideoOpen] = useState(false);
+  const [videoUrl, setVideoUrl] = useState('https://www.youtube.com/embed/VFrK2TM3gjk?autoplay=1');
   const [isLoading, setIsLoading] = useState(true);
 
   const videoCards = [
