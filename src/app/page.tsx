@@ -18,7 +18,7 @@ export default function Home() {
   const videoCards = [
     {
       id: '1',
-      thumbnail: 'https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?w=400&q=80',
+      thumbnail: 'https://res.cloudinary.com/dj15ypnx8/image/upload/v1782740749/art-gallery/photo-1579783902614-a3fb3927b6a5.jpg',
       videoUrl: 'https://www.w3schools.com/html/mov_bbb.mp4',
       title: 'Portrait Painting - Face Art Process',
       artist: 'heena_chowdhary',
@@ -28,7 +28,7 @@ export default function Home() {
     },
     {
       id: '2',
-      thumbnail: 'https://images.unsplash.com/photo-1578301978693-85fa9c0320b9?w=400&q=80',
+      thumbnail: 'https://res.cloudinary.com/dj15ypnx8/image/upload/v1782740750/art-gallery/photo-1541961017774-22349e4a1262.jpg',
       videoUrl: 'https://www.w3schools.com/html/mov_bbb.mp4',
       title: 'Face Expression - Art Creation',
       artist: 'heena_chowdhary',
@@ -38,7 +38,7 @@ export default function Home() {
     },
     {
       id: '3',
-      thumbnail: 'https://images.unsplash.com/photo-1544531586-fde5298cdd40?w=400&q=80',
+      thumbnail: 'https://res.cloudinary.com/dj15ypnx8/image/upload/v1782740751/art-gallery/photo-1578301978693-85fa9c0320b9.jpg',
       videoUrl: 'https://www.w3schools.com/html/mov_bbb.mp4',
       title: 'Human Face - Painting Journey',
       artist: 'heena_chowdhary',
@@ -48,7 +48,7 @@ export default function Home() {
     },
     {
       id: '4',
-      thumbnail: 'https://images.unsplash.com/photo-1561214115-f2f134cc4912?w=400&q=80',
+      thumbnail: 'https://res.cloudinary.com/dj15ypnx8/image/upload/v1782740752/art-gallery/photo-1507003211169-0a1dd7228f2d.jpg',
       videoUrl: 'https://www.w3schools.com/html/mov_bbb.mp4',
       title: 'Portrait Mastery - Behind Scenes',
       artist: 'heena_chowdhary',
@@ -58,7 +58,7 @@ export default function Home() {
     },
     {
       id: '5',
-      thumbnail: 'https://images.unsplash.com/photo-1577720580479-7d839d829c73?w=400&q=80',
+      thumbnail: 'https://res.cloudinary.com/dj15ypnx8/image/upload/v1782740753/art-gallery/photo-1547891654-e66ed7ebb968.jpg',
       videoUrl: 'https://www.w3schools.com/html/mov_bbb.mp4',
       title: 'Face Art - Studio Session',
       artist: 'heena_chowdhary',
@@ -68,7 +68,7 @@ export default function Home() {
     },
     {
       id: '6',
-      thumbnail: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&q=80',
+      thumbnail: 'https://res.cloudinary.com/dj15ypnx8/image/upload/v1782740753/art-gallery/photo-1578926288207-a90a5366759d.jpg',
       videoUrl: 'https://www.w3schools.com/html/mov_bbb.mp4',
       title: 'Portrait Detail - Art Process',
       artist: 'heena_chowdhary',
@@ -78,7 +78,7 @@ export default function Home() {
     },
     {
       id: '7',
-      thumbnail: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&q=80',
+      thumbnail: 'https://res.cloudinary.com/dj15ypnx8/image/upload/v1782740754/art-gallery/photo-1577720580479-7d839d829c73.jpg',
       videoUrl: 'https://www.w3schools.com/html/mov_bbb.mp4',
       title: 'Human Expression - Time Lapse',
       artist: 'heena_chowdhary',
@@ -88,7 +88,7 @@ export default function Home() {
     },
     {
       id: '8',
-      thumbnail: 'https://images.unsplash.com/photo-1547891654-e66ed7ebb968?w=400&q=80',
+      thumbnail: 'https://res.cloudinary.com/dj15ypnx8/image/upload/v1782740755/art-gallery/photo-1561214115-f2f134cc4912.jpg',
       videoUrl: 'https://www.w3schools.com/html/mov_bbb.mp4',
       title: 'Face Painting - Art Creation',
       artist: 'heena_chowdhary',
@@ -98,7 +98,7 @@ export default function Home() {
     },
     {
       id: '9',
-      thumbnail: 'https://images.unsplash.com/photo-1541961017774-22349e4a1262?w=400&q=80',
+      thumbnail: 'https://res.cloudinary.com/dj15ypnx8/image/upload/v1782740756/art-gallery/photo-1544531586-fde5298cdd40.jpg',
       videoUrl: 'https://www.w3schools.com/html/mov_bbb.mp4',
       title: 'Portrait Commission - Behind Scenes',
       artist: 'heena_chowdhary',
@@ -108,7 +108,7 @@ export default function Home() {
     },
     {
       id: '10',
-      thumbnail: 'https://images.unsplash.com/photo-1578926288207-a90a5366759d?w=400&q=80',
+      thumbnail: 'https://res.cloudinary.com/dj15ypnx8/image/upload/v1782740757/art-gallery/photo-1494790108377-be9c29b29330.jpg',
       videoUrl: 'https://www.w3schools.com/html/mov_bbb.mp4',
       title: 'Face Art Studio - Process Video',
       artist: 'heena_chowdhary',
@@ -339,7 +339,7 @@ export default function Home() {
               <VideoCardSlider 
                 videos={videoCards}
                 heading="Art Process Videos"
-                subheading="Watch behind-the-scenes of my artwork creation process"
+                subheading="Discover our handpicked selection of exceptional paintings from talented Indian artists"
               />
             </motion.div>
           )}
