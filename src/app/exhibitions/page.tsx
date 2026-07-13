@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import Image from 'next/image';
 import { FiCalendar, FiMapPin, FiArrowRight, FiChevronLeft, FiChevronRight } from 'react-icons/fi';
 import { useState } from 'react';
+import Link from 'next/link';
 
 export default function Exhibitions() {
   const heroBanner = 'https://res.cloudinary.com/dj15ypnx8/image/upload/v1783710797/art-gallery/logo-transparent.png';
@@ -167,14 +168,6 @@ export default function Exhibitions() {
                     <p className="text-gray-600 dark:text-gray-400 mb-8 leading-relaxed text-lg">
                       {exhibition.description}
                     </p>
-                    
-                    <motion.button
-                      whileHover={{ scale: 1.05, x: 5 }}
-                      whileTap={{ scale: 0.95 }}
-                      className="inline-flex items-center gap-3 px-6 py-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-xl font-semibold shadow-lg hover:shadow-xl transition-all duration-300"
-                    >
-                      Learn More <FiArrowRight />
-                    </motion.button>
                   </div>
                 </div>
               </motion.div>
@@ -247,7 +240,7 @@ export default function Exhibitions() {
               <input
                 type="email"
                 placeholder="Enter your email"
-                className="px-6 py-3 rounded-full text-gray-900 w-full sm:w-80 focus:outline-none focus:ring-2 focus:ring-purple-300"
+                className="px-6 py-3 rounded-full text-gray-900 w-full sm:w-80 border-2 border-white focus:outline-none focus:ring-2 focus:ring-purple-300"
               />
               <button className="px-8 py-3 bg-white text-gray-900 rounded-full font-semibold hover:bg-gray-100 transition-colors">
                 Subscribe
@@ -321,6 +314,7 @@ export default function Exhibitions() {
           </div>
         </div>
       </section>
+
     </div>
   );
 }
