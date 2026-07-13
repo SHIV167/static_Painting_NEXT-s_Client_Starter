@@ -234,16 +234,11 @@ export default function Exhibitions() {
               Interested in Future Exhibitions?
             </h2>
             <p className="text-xl text-gray-200 mb-8">
-              Stay updated with our upcoming exhibitions and art shows by subscribing to our newsletter.
+              Get in touch with us to learn more about upcoming exhibitions and art shows.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <input
-                type="email"
-                placeholder="Enter your email"
-                className="px-6 py-3 rounded-full text-gray-900 w-full sm:w-80 border-2 border-white focus:outline-none focus:ring-2 focus:ring-purple-300"
-              />
               <button className="px-8 py-3 bg-white text-gray-900 rounded-full font-semibold hover:bg-gray-100 transition-colors">
-                Subscribe
+                Call Us
               </button>
             </div>
           </motion.div>
