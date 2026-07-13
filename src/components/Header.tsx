@@ -172,7 +172,7 @@ export default function Header() {
                   </button>
                 </div>
 
-                <nav className="space-y-3 flex-1">
+                <nav className="space-y-3">
                   {navItems.map((item, index) => {
                     const Icon = item.icon;
                     return (
@@ -226,36 +226,36 @@ export default function Header() {
                       </motion.div>
                     );
                   })}
-                </nav>
 
-                <motion.div
-                  initial={{ y: 20, opacity: 0 }}
-                  animate={{ y: 0, opacity: 1 }}
-                  transition={{ delay: 0.4 }}
-                  className="mt-6"
-                >
-                  <div 
-                    className="p-5 rounded-3xl text-white relative overflow-hidden"
-                    style={{
-                      background: `linear-gradient(135deg, ${theme.primary[600]}, ${theme.secondary[600]})`
-                    }}
+                  <motion.div
+                    initial={{ y: 20, opacity: 0 }}
+                    animate={{ y: 0, opacity: 1 }}
+                    transition={{ delay: 0.4 }}
+                    className="mt-4"
                   >
-                    <motion.div
-                      className="absolute -top-10 -right-10 w-32 h-32 rounded-full bg-white/10"
-                      animate={{ scale: [1, 1.2, 1] }}
-                      transition={{ duration: 3, repeat: Infinity }}
-                    />
-                    <motion.div
-                      className="absolute -bottom-10 -left-10 w-24 h-24 rounded-full bg-white/10"
-                      animate={{ scale: [1, 1.3, 1] }}
-                      transition={{ duration: 4, repeat: Infinity, delay: 0.5 }}
-                    />
-                    <div className="relative z-10">
-                      <p className="text-sm font-semibold mb-2">✨ Discover Art</p>
-                      <p className="text-xs opacity-90 leading-relaxed">Explore our curated collection of contemporary Indian art</p>
+                    <div 
+                      className="p-5 rounded-3xl text-white relative overflow-hidden"
+                      style={{
+                        background: `linear-gradient(135deg, ${theme.primary[600]}, ${theme.secondary[600]})`
+                      }}
+                    >
+                      <motion.div
+                        className="absolute -top-10 -right-10 w-32 h-32 rounded-full bg-white/10"
+                        animate={{ scale: [1, 1.2, 1] }}
+                        transition={{ duration: 3, repeat: Infinity }}
+                      />
+                      <motion.div
+                        className="absolute -bottom-10 -left-10 w-24 h-24 rounded-full bg-white/10"
+                        animate={{ scale: [1, 1.3, 1] }}
+                        transition={{ duration: 4, repeat: Infinity, delay: 0.5 }}
+                      />
+                      <div className="relative z-10">
+                        <p className="text-sm font-semibold mb-2">✨ Discover Art</p>
+                        <p className="text-xs opacity-90 leading-relaxed">Explore our curated collection of contemporary Indian art</p>
+                      </div>
                     </div>
-                  </div>
-                </motion.div>
+                  </motion.div>
+                </nav>
               </div>
             </motion.div>
           </>
