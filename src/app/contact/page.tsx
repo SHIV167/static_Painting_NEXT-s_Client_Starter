@@ -7,7 +7,7 @@ import toast, { Toaster } from 'react-hot-toast';
 import Image from 'next/image';
 
 export default function Contact() {
-  const heroBanner = 'https://res.cloudinary.com/dj15ypnx8/image/upload/v1783710797/art-gallery/logo-transparent.png';
+  const heroBanner = 'https://res.cloudinary.com/dj15ypnx8/image/upload/v1784040335/Shades_and_strokes_logo_g1wpxz.png';
   const [formData, setFormData] = useState({
     name: '',
     email: '',

@@ -30,7 +30,7 @@ export default function Footer() {
                 <div className="absolute inset-0 rounded-full bg-gradient-to-br from-purple-500 via-pink-500 to-purple-600 animate-pulse" style={{ animationDuration: '3s' }} />
                 <div className="absolute inset-1 rounded-full bg-white dark:bg-gray-900 overflow-hidden">
                   <img
-                    src="https://res.cloudinary.com/dj15ypnx8/image/upload/v1783710797/art-gallery/logo-transparent.png"
+                    src="https://res.cloudinary.com/dj15ypnx8/image/upload/v1784040335/Shades_and_strokes_logo_g1wpxz.png"
                     alt="Heena Chowdhary Logo"
                     width={56}
                     height={56}

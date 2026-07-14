@@ -43,7 +43,7 @@ export default function Header() {
               <div className="relative">
                 <div className="relative w-12 h-12">
                   <img
-                    src="https://res.cloudinary.com/dj15ypnx8/image/upload/v1783710797/art-gallery/logo-transparent.png"
+                    src="https://res.cloudinary.com/dj15ypnx8/image/upload/v1784040335/Shades_and_strokes_logo_g1wpxz.png"
                     alt="Heena Chowdhary Logo"
                     width={48}
                     height={48}
@@ -151,7 +151,7 @@ export default function Header() {
                   <Link href="/" className="flex items-center gap-3" onClick={() => setIsMenuOpen(false)}>
                     <div className="relative w-10 h-10">
                       <img
-                        src="https://res.cloudinary.com/dj15ypnx8/image/upload/v1783710797/art-gallery/logo-transparent.png"
+                        src="https://res.cloudinary.com/dj15ypnx8/image/upload/v1784040335/Shades_and_strokes_logo_g1wpxz.png"
                         alt="Heena Chowdhary Logo"
                         width={40}
                         height={40}

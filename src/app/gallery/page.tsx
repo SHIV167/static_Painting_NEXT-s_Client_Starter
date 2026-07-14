@@ -6,7 +6,7 @@ import { useState } from 'react';
 import { FiX, FiChevronLeft, FiChevronRight } from 'react-icons/fi';
 
 export default function Gallery() {
-  const heroBanner = 'https://res.cloudinary.com/dj15ypnx8/image/upload/v1783710797/art-gallery/logo-transparent.png';
+  const heroBanner = 'https://res.cloudinary.com/dj15ypnx8/image/upload/v1784040335/Shades_and_strokes_logo_g1wpxz.png';
   const [selectedImage, setSelectedImage] = useState<number | null>(null);
 
   const categoryItems = [

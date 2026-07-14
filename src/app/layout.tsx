@@ -35,8 +35,8 @@ export const metadata: Metadata = {
   title: "Heena Chowdhary - Multidisciplinary Artist | Shades n Strokes",
   description: "Multidisciplinary artist based in Delhi. All that surrounds you is ART..just keep a keen eye and an open heart. Contact for customised art.",
   icons: {
-    icon: "https://res.cloudinary.com/dj15ypnx8/image/upload/v1783710797/art-gallery/logo-transparent.png",
-    apple: "https://res.cloudinary.com/dj15ypnx8/image/upload/v1783710797/art-gallery/logo-transparent.png",
+    icon: "https://res.cloudinary.com/dj15ypnx8/image/upload/v1784040335/Shades_and_strokes_logo_g1wpxz.png",
+    apple: "https://res.cloudinary.com/dj15ypnx8/image/upload/v1784040335/Shades_and_strokes_logo_g1wpxz.png",
   },
 };
 

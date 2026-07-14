@@ -6,7 +6,7 @@ import { artistInfo } from '@/lib/data';
 import { FiAward, FiBook, FiHeart } from 'react-icons/fi';
 
 export default function About() {
-  const heroBanner = 'https://res.cloudinary.com/dj15ypnx8/image/upload/v1783710797/art-gallery/logo-transparent.png';
+  const heroBanner = 'https://res.cloudinary.com/dj15ypnx8/image/upload/v1784040335/Shades_and_strokes_logo_g1wpxz.png';
 
   return (
     <div className="min-h-screen bg-gray-50 dark:bg-gray-900">

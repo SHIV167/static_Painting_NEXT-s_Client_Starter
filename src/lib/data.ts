@@ -184,5 +184,5 @@ export const artistInfo = {
     'Featured at Nicholas Roerich Art Gallery (2026)',
     'Instagram: @_shadesnstrokes'
   ],
-  image: 'https://res.cloudinary.com/dj15ypnx8/image/upload/v1783708145/art-gallery/artist-profile.webp'
+  image: 'https://res.cloudinary.com/dj15ypnx8/image/upload/v1784040335/Shades_and_strokes_logo_g1wpxz.png'
 };

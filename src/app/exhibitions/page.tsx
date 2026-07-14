@@ -7,7 +7,7 @@ import { useState } from 'react';
 import Link from 'next/link';
 
 export default function Exhibitions() {
-  const heroBanner = 'https://res.cloudinary.com/dj15ypnx8/image/upload/v1783710797/art-gallery/logo-transparent.png';
+  const heroBanner = 'https://res.cloudinary.com/dj15ypnx8/image/upload/v1784040335/Shades_and_strokes_logo_g1wpxz.png';
 
   const galleryImages = [
     'https://res.cloudinary.com/dj15ypnx8/image/upload/v1783708461/673122680_17962021311073055_1029815282776648670_n_sa6fm3.webp',
